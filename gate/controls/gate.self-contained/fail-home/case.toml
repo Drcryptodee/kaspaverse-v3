@@ -1,0 +1,4 @@
+expect = "fail"
+[[write]]
+path = "gate/checks/zz_probe.py"
+text = "import os\nos.path.expanduser(\"~\")\n"

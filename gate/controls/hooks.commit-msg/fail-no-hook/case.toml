@@ -1,0 +1,3 @@
+expect = "fail"
+[[remove]]
+path = ".githooks/commit-msg"

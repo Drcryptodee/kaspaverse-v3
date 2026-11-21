@@ -1,0 +1,22 @@
+# Machine-local and generated
+.DS_Store
+__pycache__/
+*.pyc
+gate/out/
+
+# Never commit secrets or signing material
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.pem
+*key.properties
+.env
+.env.*
+!.env.example
+id_rsa*
+id_ed25519*
+
+# Research builds and upstream clones are not repository material
+_build/
+_upstream/

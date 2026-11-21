@@ -1,0 +1,4 @@
+expect = "fail"
+[[write]]
+path = "README.md"
+text = "# KaspaVerse\n"

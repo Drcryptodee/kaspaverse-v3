@@ -1,0 +1,4 @@
+#!/bin/sh
+# Refuses a commit whose message breaks the commit standard (CONTRIBUTING.md, "Commit messages").
+root=$(git rev-parse --show-toplevel) || exit 1
+exec python3 -I "$root/tools/check-commit-msg.py" --public "$1"

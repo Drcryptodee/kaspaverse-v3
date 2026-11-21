@@ -1,0 +1,4 @@
+expect = "fail"
+[[write]]
+path = "README.md"
+text = "See 20261112-mac-record-budgets for why.\n"

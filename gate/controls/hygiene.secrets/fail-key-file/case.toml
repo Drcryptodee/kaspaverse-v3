@@ -1,0 +1,4 @@
+expect = "fail"
+[[write]]
+path = "android/release.jks"
+text = "x\n"

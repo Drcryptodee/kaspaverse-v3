@@ -1,0 +1,4 @@
+expect = "fail"
+[[write]]
+path = "tools/check-commit-msg.py"
+text = "import sys\nsys.exit(0)\n"

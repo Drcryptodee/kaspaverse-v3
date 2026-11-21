@@ -1,0 +1,4 @@
+expect = "pass"
+[[write]]
+path = "docs/signing.md"
+text = "The release key is a PKCS#12 file in a password manager; never commit a keystore or a private key.\n"

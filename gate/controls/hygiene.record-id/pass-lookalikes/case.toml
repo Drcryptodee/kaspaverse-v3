@@ -1,0 +1,4 @@
+expect = "pass"
+[[write]]
+path = "README.md"
+text = "Fixture 20261112-run-a, build 20261112-macos-arm64, log 20261112-ubuntu-ci.\n"

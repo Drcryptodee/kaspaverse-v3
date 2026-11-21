@@ -1,0 +1,46 @@
+# The public half of the gate: what this repository promises, checkable from here alone.
+# One entry per check; each check is one file in checks/ with control cases in controls/<id>/.
+half = "public"
+machines = ["mac", "ubu"]
+
+[[check]]
+id = "public.files"
+file = "public_files.py"
+proves = "The licence, policies, contributor guide, commit hook, checker and allowed signers exist; the README carries the notice that it is not for real funds until release."
+why = "README.md; SECURITY.md; CONTRIBUTING.md"
+tier = ["commit", "ci"]
+
+[[check]]
+id = "hygiene.secrets"
+file = "hygiene_secrets.py"
+proves = "No secret-shaped file and no private key or token material is in what a commit could carry."
+why = "SECURITY.md"
+tier = ["commit", "ci"]
+
+[[check]]
+id = "hygiene.record-id"
+file = "hygiene_record_id.py"
+proves = "No private record id in the YYYYMMDD-<machine>-<slug> shape appears in a public file."
+why = "CONTRIBUTING.md, Commit messages"
+tier = ["commit", "ci"]
+
+[[check]]
+id = "gate.self-contained"
+file = "gate_self_contained.py"
+proves = "No gate file reads a path above this repository, the home folder or the environment."
+why = "README.md, Proof over claim"
+tier = ["ci"]
+
+[[check]]
+id = "gate.size"
+file = "gate_size.py"
+proves = "No gate file is over 300 lines, and no check file is more than 25% comment lines."
+why = "README.md, Proof over claim"
+tier = ["commit", "ci"]
+
+[[check]]
+id = "hooks.commit-msg"
+file = "hooks_commit_msg.py"
+proves = "The commit-msg hook runs the checker, and the checker refuses planted bad messages and accepts good ones."
+why = "CONTRIBUTING.md, Commit messages"
+tier = ["commit", "ci"]

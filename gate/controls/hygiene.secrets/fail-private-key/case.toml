@@ -1,0 +1,4 @@
+expect = "fail"
+[[write]]
+path = "notes/k.txt"
+text = "-----BEGIN OPENSSH PRIVATE KEY-----\nabc\n"

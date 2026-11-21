@@ -1,0 +1,4 @@
+expect = "fail"
+[[write]]
+path = "gate/checks/zz_probe.py"
+text = "open(\"../docs/x.md\")\n"

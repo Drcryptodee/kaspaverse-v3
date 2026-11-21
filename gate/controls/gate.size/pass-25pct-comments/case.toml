@@ -1,0 +1,5 @@
+expect = "pass"
+[[write]]
+path = "gate/checks/zz_probe.py"
+lines = 100
+comment_lines = 25
